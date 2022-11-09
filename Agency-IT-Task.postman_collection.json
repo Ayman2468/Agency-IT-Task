@@ -1,0 +1,689 @@
+{
+	"info": {
+		"_postman_id": "008fada4-e753-4a2a-8eb9-af50773a97ab",
+		"name": "Agency-IT-Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20573773"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "ahmed",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "24682468",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "24682468",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_name",
+									"value": "ahmed",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "24682468",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "qqsnZxvn5mIIth9dqJWz3qINzWRd5yhvAfrrVmrU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "project",
+			"item": [
+				{
+					"name": "allProjects",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "X9maqtXnBfBeqtKi2BmWyBfab9Mh4BgoaAEeLQAu",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/project/allProjects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"project",
+								"allProjects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singleProject",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "X9maqtXnBfBeqtKi2BmWyBfab9Mh4BgoaAEeLQAu",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/project/singleProject/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"project",
+								"singleProject",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "X9maqtXnBfBeqtKi2BmWyBfab9Mh4BgoaAEeLQAu",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "project_name",
+									"value": "first project",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/project/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"project",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "X9maqtXnBfBeqtKi2BmWyBfab9Mh4BgoaAEeLQAu",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "project_name",
+									"value": "first-project",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/project/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"project",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "X9maqtXnBfBeqtKi2BmWyBfab9Mh4BgoaAEeLQAu",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/project/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"project",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "task",
+			"item": [
+				{
+					"name": "allTasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "LB0PtnL9pe2nwgFQq1aetbti9SbY6qX3oNjsFC8r",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/task/allTasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"task",
+								"allTasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "myTasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "LB0PtnL9pe2nwgFQq1aetbti9SbY6qX3oNjsFC8r",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/task/myTasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"task",
+								"myTasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "LB0PtnL9pe2nwgFQq1aetbti9SbY6qX3oNjsFC8r",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/task/submit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"task",
+								"submit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "singleProject",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "X9maqtXnBfBeqtKi2BmWyBfab9Mh4BgoaAEeLQAu",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/project/singleProject/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"project",
+								"singleProject",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "X9maqtXnBfBeqtKi2BmWyBfab9Mh4BgoaAEeLQAu",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "task_name",
+									"value": "first task",
+									"type": "text"
+								},
+								{
+									"key": "project_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "details",
+									"value": "lets try",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/task/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"task",
+								"create"
+							],
+							"query": [
+								{
+									"key": "task_name",
+									"value": "first task",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "X9maqtXnBfBeqtKi2BmWyBfab9Mh4BgoaAEeLQAu",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "task_name",
+									"value": "firsttask",
+									"type": "text"
+								},
+								{
+									"key": "project_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "details",
+									"value": "lets try a new",
+									"type": "text"
+								},
+								{
+									"key": "employee_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/task/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"task",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "X9maqtXnBfBeqtKi2BmWyBfab9Mh4BgoaAEeLQAu",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/Agency-IT-Task/public/api/project/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Agency-IT-Task",
+								"public",
+								"api",
+								"project",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
